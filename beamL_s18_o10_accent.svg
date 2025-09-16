@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lumen Beam L">
+  <title>Lumen Beam L</title>
+  <desc>Minimal L with light beam wedge</desc>
+  
+        <defs>
+          <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.1"/>
+            <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+          </linearGradient>
+        </defs><path d="M64 44 v136 h120" fill="none" stroke="#E6E7EA" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><polygon points="84,72 220,90.0 220,54.0" fill="url(#beamGrad)"/>
+</svg>
