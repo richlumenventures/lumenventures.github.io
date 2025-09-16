@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <title>Lumen Ventures — Coming Soon</title>
-  <meta name="description" content="Lumen Ventures — shining a light on tech for good." />
+  <title>Lumen Ventures</title>
+  <meta name="description" content="Lumen Ventures — Opportunity in plain light." />
 
   <!-- Techy monospace font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0b0c0f; --fg:#e6e7ea; --muted:#9aa0a6; --line:#171920;
-      --accent:#8B5CF6; /* subtle violet used in logo beam */
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    :root{ --bg:#0b0c0f; --fg:#e6e7ea; --muted:#9aa0a6; --line:#171920; }
+    *{box-sizing:border-box} html,body{height:100%}
     body{
       margin:0; color:var(--fg);
       background:
@@ -26,40 +22,25 @@
         radial-gradient(900px 500px at -10% 110%, #0e1118 0, transparent 55%),
         #0b0c0f;
       display:grid; place-items:center;
-      font-family: "Anonymous Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family:"Anonymous Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size:15px; line-height:1.7; letter-spacing:.01em;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    .wrap{width:min(720px,92vw); padding:48px 24px; text-align:center}
-    .logo{height:64px; width:auto; margin:0 auto 14px; display:block; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
+    .wrap{width:min(720px,92vw); padding:56px 24px; text-align:center}
+    .logo{height:64px; width:auto; margin:0 auto 12px; display:block; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
     .brand{font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(16px,2vw,18px); opacity:.9}
-    hr{border:0; border-top:1px solid var(--line); margin:18px auto 22px; width:min(420px,80vw)}
-    h1{margin:8px 0 10px; font-size:clamp(28px,5vw,40px); font-weight:700}
-    p{margin:8px 0 18px; color:var(--muted)}
-    .btn{
-      display:inline-block; padding:10px 16px; border-radius:12px;
-      border:1px solid var(--line); background:rgba(255,255,255,.02);
-      color:var(--fg); text-decoration:none; transition:background .15s ease, transform .15s ease;
-    }
-    .btn:hover{background:rgba(255,255,255,.06); transform:translateY(-1px)}
-    .hint{margin-top:6px; font-size:12px; color:#8b8f97}
-    footer{margin-top:26px; font-size:12px; color:#8b8f97}
-    .accent-dot{display:inline-block; width:.6em; height:.6em; background:var(--accent); border-radius:50%; margin-left:.35em; vertical-align:middle; opacity:.9}
+    hr{border:0; border-top:1px solid var(--line); margin:18px auto 24px; width:min(420px,80vw)}
+    h1{margin:0; font-size:clamp(26px,5vw,40px); font-weight:700}
+    footer{margin-top:28px; font-size:12px; color:#8b8f97}
   </style>
 </head>
 <body>
   <main class="wrap" role="main">
-    <!-- Your chosen logo (upload beamL_s18_o10_accent.svg to repo root) -->
-    <img src="beamL_s18_o10_accent.svg" alt="Lumen Ventures logo — beam L" class="logo">
-
-    <div class="brand">LUMEN VENTURES<span class="accent-dot" aria-hidden="true"></span></div>
+    <!-- Ensure this file exists in the repo root -->
+    <img src="beamL_s18_o10_accent.svg" alt="Lumen Ventures logo" class="logo">
+    <div class="brand">LUMEN VENTURES</div>
     <hr>
-    <h1>Coming soon.</h1>
-    <p>Shining a light on tech-for-good that might otherwise be overlooked.</p>
-
-    <p><a class="btn" href="mailto:hello@lumenventures.co">Contact</a></p>
-    <div class="hint">Prefer a different weight/beam? Tell me and I’ll swap it.</div>
-
+    <h1>Opportunity in plain light.</h1>
     <footer>© <span id="y"></span> Lumen Ventures</footer>
   </main>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
