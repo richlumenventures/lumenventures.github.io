@@ -6,43 +6,74 @@
   <meta name="color-scheme" content="dark" />
   <title>Lumen Ventures</title>
 
-  <!-- Techy monospace -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Anonymous Pro (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
-    :root{ --bg:#0b0c0f; --fg:#e6e7ea; --muted:#9aa0a6; --line:#171920; }
+    :root{ --bg:#0b0c0f; --fg:#e6e7ea; --muted:#9aa0a6; --line:#171920; --acc:#8B5CF6; }
     *{box-sizing:border-box} html,body{height:100%}
     body{
       margin:0; color:var(--fg);
       background:
         radial-gradient(700px 340px at 75% -10%, #141722 0, transparent 60%),
         radial-gradient(900px 500px at -10% 110%, #0e1118 0, transparent 55%),
-        #0b0c0f;
-      display:grid; place-items:center;
-      font-family:"Anonymous Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:15px; line-height:1.7;
+        var(--bg);
+      font-family:"Anonymous Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    .wrap{width:min(720px,92vw); padding:56px 24px; text-align:center}
-    .logo{height:64px; width:auto; margin:0 auto 12px; display:block; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
-    .brand{font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(16px,2vw,18px); opacity:.95}
-    .contact{margin-top:16px}
-    .contact a{
-      color:var(--fg); text-decoration:underline; text-underline-offset:3px;
+    .stack{
+      max-width:760px; margin:12vh auto 10vh; padding:0 20px;
+      display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;
     }
-    .contact a:hover{opacity:.85}
+    /* Motif sizing */
+    .motif{ width:min(120px,28vw); height:auto; margin-bottom:6px }
+    .brand{ font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(18px,2.4vw,22px); opacity:.95 }
+    .tagline{ margin-top:2px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-style:italic; color:var(--muted) }
+    .contact{ margin-top:8px }
+    .contact a{ color:var(--fg); text-decoration:underline; text-underline-offset:3px }
+    .contact a:hover{ opacity:.85 }
+    footer{ margin-top:10px; font-size:12px; color:#8b8f97 }
   </style>
 </head>
 <body>
-  <main class="wrap" role="main">
-    <!-- Ensure this SVG is in the repo root -->
-    <img src="beamL_s18_o10_accent.svg" alt="Lumen Ventures logo" class="logo">
+  <main class="stack" role="main">
+    <!-- Motif: kinetic glint dotted (a0, 8 dots, slower decay) -->
+    <svg class="motif" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-label="L motif with kinetic glint">
+      <defs>
+        <radialGradient id="glow" cx="0.5" cy="0.5" r="0.7">
+          <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.50"/>
+          <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- vertical stroke -->
+      <path d="M64 44 v136" fill="none" stroke="#E6E7EA" stroke-width="18" stroke-linecap="round"/>
+      <!-- glint -->
+      <circle cx="64" cy="176" r="10" fill="#E6E7EA"/>
+      <circle cx="64" cy="176" r="28" fill="url(#glow)" opacity="0.7"/>
+      <!-- 8-dot arm, slower decay -->
+      <g fill="#8B5CF6">
+        <circle cx="82"  cy="176" r="5.50" opacity="0.72"/>
+        <circle cx="100" cy="176" r="5.00" opacity="0.66"/>
+        <circle cx="118" cy="176" r="4.50" opacity="0.60"/>
+        <circle cx="136" cy="176" r="4.00" opacity="0.54"/>
+        <circle cx="154" cy="176" r="3.50" opacity="0.48"/>
+        <circle cx="172" cy="176" r="3.00" opacity="0.42"/>
+        <circle cx="190" cy="176" r="2.50" opacity="0.36"/>
+        <circle cx="208" cy="176" r="2.00" opacity="0.30"/>
+      </g>
+    </svg>
+
     <div class="brand">LUMEN VENTURES</div>
+    <div class="tagline">Illuminating possibilities</div>
+
     <div class="contact">
-      <a href="mailto:info@lumenventures.co" aria-label="Email Lumen Ventures">Contact</a>
+      <a href="mailto:info@lumenventures.co">info@lumenventures.co</a>
     </div>
+
+    <footer>© <span id="y"></span> Lumen Ventures</footer>
   </main>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
