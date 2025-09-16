@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <title>Lumen Ventures</title>
-  <meta name="description" content="Lumen Ventures — Opportunity in plain light." />
 
-  <!-- Monospace, techy -->
+  <!-- Techy monospace -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
@@ -23,32 +22,27 @@
         #0b0c0f;
       display:grid; place-items:center;
       font-family:"Anonymous Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:15px; line-height:1.7; letter-spacing:.01em;
+      font-size:15px; line-height:1.7;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
     .wrap{width:min(720px,92vw); padding:56px 24px; text-align:center}
     .logo{height:64px; width:auto; margin:0 auto 12px; display:block; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
-    .brand{font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(16px,2vw,18px); opacity:.9}
-    hr{border:0; border-top:1px solid var(--line); margin:16px auto 14px; width:min(420px,80vw)}
-    .tagline{margin:0; font-size:13px; color:var(--muted); letter-spacing:.01em}
-    .contact{margin-top:14px}
-    .contact a{color:var(--fg); text-decoration:underline; text-underline-offset:3px}
+    .brand{font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(16px,2vw,18px); opacity:.95}
+    .contact{margin-top:16px}
+    .contact a{
+      color:var(--fg); text-decoration:underline; text-underline-offset:3px;
+    }
     .contact a:hover{opacity:.85}
-    footer{margin-top:26px; font-size:12px; color:#8b8f97}
   </style>
 </head>
 <body>
   <main class="wrap" role="main">
-    <!-- Ensure this file exists in the repo root -->
+    <!-- Ensure this SVG is in the repo root -->
     <img src="beamL_s18_o10_accent.svg" alt="Lumen Ventures logo" class="logo">
     <div class="brand">LUMEN VENTURES</div>
-    <hr>
-    <p class="tagline">Opportunity in plain light.</p>
     <div class="contact">
       <a href="mailto:info@lumenventures.co" aria-label="Email Lumen Ventures">Contact</a>
     </div>
-    <footer>© <span id="y"></span> Lumen Ventures</footer>
   </main>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
