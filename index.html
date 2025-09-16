@@ -1,19 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Coming Soon</title>
-    <style>
-      body {margin:0; display:grid; place-items:center; min-height:100vh; font:16px/1.4 system-ui, sans-serif;}
-      .card {text-align:center; padding:2.5rem; border:1px solid #ddd; border-radius:14px; box-shadow:0 4px 20px rgba(0,0,0,.06);}
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <h1>👋 Website coming soon</h1>
-      <p>Thanks for stopping by. Check back shortly!</p>
-      <p><a href="mailto:you@example.com">Contact me</a></p>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Lumen Ventures</title>
+  <meta name="description" content="Lumen Ventures — site coming soon." />
+  <style>
+    :root{
+      --bg:#0b0c0f; --fg:#e6e7ea; --muted:#9aa0a6; --line:#171920;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--fg);
+      background:
+        radial-gradient(700px 340px at 75% -10%, #141722 0, transparent 60%),
+        radial-gradient(900px 500px at -10% 110%, #0e1118 0, transparent 55%),
+        #0b0c0f;
+      display:grid; place-items:center;
+      font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+      letter-spacing:.01em;
+    }
+    .wrap{width:min(720px,92vw); padding:48px 22px; text-align:center}
+    .logo{height:56px; width:auto; margin:0 auto 10px; display:block; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
+    .brand{font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; font-size:clamp(18px,2.2vw,20px); opacity:.95}
+    h1{margin:14px 0 6px; font-size:clamp(28px,5vw,40px); font-weight:600}
+    p{margin:8px 0 18px; color:var(--muted)}
+    hr{border:0; border-top:1px solid var(--line); margin:18px auto 20px; width:min(420px,80vw)}
+    .btn{
+      display:inline-block; padding:10px 16px; border-radius:12px;
+      border:1px solid var(--line); background:rgba(255,255,255,.02);
+      color:var(--fg); text-decoration:none;
+      transition:background .15s ease, transform .15s ease;
+    }
+    .btn:hover{background:rgba(255,255,255,.06); transform:translateY(-1px)}
+    footer{margin-top:24px; font-size:12px; color:#8b8f97}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <!-- If you don't have a logo yet, this image will simply hide itself -->
+    <img src="logo.png" alt="Lumen Ventures" class="logo" onerror="this.style.display='none'">
+    <div class="brand">LUMEN VENTURES</div>
+    <hr>
+    <h1>Coming soon.</h1>
+    <p>We’re quietly building. Check back later or drop us a line.</p>
+    <p><a class="btn" href="mailto:hello@lumenventures.co">Contact</a></p>
+    <footer>© <span id="y"></span> Lumen Ventures</footer>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
 </html>
