@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="kgdL — a0 d8 slower std">
+  <title>kgdL — a0 d8 slower std</title>
+  
+    <defs>
+      <radialGradient id="glow" cx="0.5" cy="0.5" r="0.7">
+        <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.50"/>
+        <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    
+<path d="M64 44 v136" fill="none" stroke="#E6E7EA" stroke-width="18" stroke-linecap="round"/>
+<circle cx="64" cy="176" r="10" fill="#E6E7EA"/><circle cx="64" cy="176" r="28" fill="url(#glow)" opacity="0.7"/>
+<circle cx="82.00" cy="176.00" r="5.50" fill="#8B5CF6" opacity="0.72"/>
+<circle cx="100.00" cy="176.00" r="5.00" fill="#8B5CF6" opacity="0.66"/>
+<circle cx="118.00" cy="176.00" r="4.50" fill="#8B5CF6" opacity="0.60"/>
+<circle cx="136.00" cy="176.00" r="4.00" fill="#8B5CF6" opacity="0.54"/>
+<circle cx="154.00" cy="176.00" r="3.50" fill="#8B5CF6" opacity="0.48"/>
+<circle cx="172.00" cy="176.00" r="3.00" fill="#8B5CF6" opacity="0.42"/>
+<circle cx="190.00" cy="176.00" r="2.50" fill="#8B5CF6" opacity="0.36"/>
+<circle cx="208.00" cy="176.00" r="2.00" fill="#8B5CF6" opacity="0.30"/>
+</svg>
