@@ -6,7 +6,6 @@
   <meta name="color-scheme" content="dark" />
   <title>Lumen Ventures</title>
 
-  <!-- Anonymous Pro (mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
@@ -24,21 +23,19 @@
     }
     .stack{
       max-width:760px; margin:12vh auto 10vh; padding:0 20px;
-      display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;
     }
-    /* Motif sizing */
     .motif{ width:min(120px,28vw); height:auto; margin-bottom:6px }
-    .brand{ font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(18px,2.4vw,22px); opacity:.95 }
-    .tagline{ margin-top:2px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-style:italic; color:var(--muted) }
-    .contact{ margin-top:8px }
+    .brand{ font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:clamp(22px,3.2vw,30px); opacity:.95 }
+    .tagline{ margin-top:0; font-size:10px; letter-spacing:.18em; text-transform:uppercase; font-style:italic; color:var(--muted) }
     .contact a{ color:var(--fg); text-decoration:underline; text-underline-offset:3px }
     .contact a:hover{ opacity:.85 }
-    footer{ margin-top:10px; font-size:12px; color:#8b8f97 }
+    footer{ font-size:12px; color:#8b8f97 }
   </style>
 </head>
 <body>
   <main class="stack" role="main">
-    <!-- Motif: kinetic glint dotted (a0, 8 dots, slower decay) -->
+    <!-- Motif: kinetic glint dotted (0°, 8 dots, slower decay) with slightly larger dots -->
     <svg class="motif" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-label="L motif with kinetic glint">
       <defs>
         <radialGradient id="glow" cx="0.5" cy="0.5" r="0.7">
@@ -46,21 +43,18 @@
           <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <!-- vertical stroke -->
       <path d="M64 44 v136" fill="none" stroke="#E6E7EA" stroke-width="18" stroke-linecap="round"/>
-      <!-- glint -->
       <circle cx="64" cy="176" r="10" fill="#E6E7EA"/>
       <circle cx="64" cy="176" r="28" fill="url(#glow)" opacity="0.7"/>
-      <!-- 8-dot arm, slower decay -->
       <g fill="#8B5CF6">
-        <circle cx="82"  cy="176" r="5.50" opacity="0.72"/>
-        <circle cx="100" cy="176" r="5.00" opacity="0.66"/>
-        <circle cx="118" cy="176" r="4.50" opacity="0.60"/>
-        <circle cx="136" cy="176" r="4.00" opacity="0.54"/>
-        <circle cx="154" cy="176" r="3.50" opacity="0.48"/>
-        <circle cx="172" cy="176" r="3.00" opacity="0.42"/>
-        <circle cx="190" cy="176" r="2.50" opacity="0.36"/>
-        <circle cx="208" cy="176" r="2.00" opacity="0.30"/>
+        <circle cx="82"  cy="176" r="6.00" opacity="0.72"/>
+        <circle cx="100" cy="176" r="5.50" opacity="0.66"/>
+        <circle cx="118" cy="176" r="5.00" opacity="0.60"/>
+        <circle cx="136" cy="176" r="4.50" opacity="0.54"/>
+        <circle cx="154" cy="176" r="4.00" opacity="0.48"/>
+        <circle cx="172" cy="176" r="3.50" opacity="0.42"/>
+        <circle cx="190" cy="176" r="3.00" opacity="0.36"/>
+        <circle cx="208" cy="176" r="2.50" opacity="0.30"/>
       </g>
     </svg>
 
@@ -73,7 +67,6 @@
 
     <footer>© <span id="y"></span> Lumen Ventures</footer>
   </main>
-
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
